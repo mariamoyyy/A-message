@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personalized Message</title>
+  <style>
+    body {
+      font-family: "Georgia", serif;
+      text-align: center;
+      padding: 50px;
+      background: linear-gradient(135deg, #fce4ec 0%, #f8bbd0 100%);
+      color: #4a4e69;
+    }
+    h1 {
+      font-size: 2.5rem;
+      color: #8e44ad;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+    input, button {
+      font-size: 1.1rem;
+      padding: 10px;
+      border: 2px solid #8e44ad;
+      border-radius: 10px;
+      margin: 10px;
+    }
+    button {
+      background-color: #e57373;
+      color: #fff;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #d32f2f;
+    }
+    #message {
+      margin-top: 30px;
+      padding: 25px;
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 15px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      font-size: 1.2rem;
+      color: #4a4e69;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: left;
+      line-height: 1.6;
+    }
+    footer {
+      margin-top: 40px;
+      font-size: 0.9rem;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <h1>Welcome to Your Personalized Page! 🌸</h1>
+  <p>Enter your name below to read a special message:</p>
+
+  <input type="text" id="nameInput" placeholder="Your Name Here">
+  <button onclick="displayMessage()">Reveal Message</button>
+
+  <div id="message"></div>
+
+  <footer>Made with <3 just for you.</footer>
+
+  <script>
+    function displayMessage() {
+      const name = document.getElementById('nameInput').value.trim();
+      const messageDiv = document.getElementById('message');
+
+      if (name) {
+        messageDiv.innerHTML = `
+          <strong>Dear ${name},</strong><br><br>
+          This person wants to start by apologizing if they have ever been the reason your heart or your feelings (in the past few days) 
+          were hurt. Those are things so incredibly precious to her, and the idea that she might have affected them negatively 
+          is more hurtful to her herself than she can ever describe. 
+          <br><br>
+          Your heart is a treasure, your emotions are priceless, and everything you carry within you is something she holds so close to herself. 
+          She wants you to know that your presence in her life keeps it happy, bright, and full of meaning.
+          <br><br>
+          She always tells you about how you bring light into her days, and just knowing you’re there gives her the strength to face anything. 
+          She would do anything to protect your heart and the preciousness that it contains, with her own bare hands, because you mean more 
+          to her than words could ever capture.
+          <br><br>
+          Please never forget how cherished and deeply cared for you are. You are this person's safest space, her happiness, and concentrated 
+          in you is so much that she holds dear. She is super grateful for you, and I hope you know how much you truly mean to her.
+          <br><br>
+          She also wants you to know that she misses you (and is a little jealous of the people who see you so often). But then, she finds solace 
+          in memories and is happy to see you happy and wants to continue seeing you happy. She is always there. She will be there in the bad 
+          days, in the good days. She will be there waiting to pull away any pain the world inflicts.
+          <br><br>
+          (Which is why she would NEVER want to be a reason the reader of this message feels down in any way). She will always be there—waiting. 
+          This sounds like a simple sentence but she needs you to realize the depth and meaning this sentence contains. 
+          <br><br>
+          She will always be there—waiting. 
+          <br><br>
+          With all her heart,<br>
+          Someone who cares deeply for you<br>
+          (Urges the reader to remind them of a phrase said on a certain bench)
+        `;
+      } else {
+        messageDiv.innerHTML = "Please enter your name to see your personalized message.";
+      }
+    }
+  </script>
+</body>
+</html>
